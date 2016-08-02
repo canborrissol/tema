@@ -1,0 +1,13 @@
+<li class="thumbox">
+	<!-- <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2> -->
+	<a href="{{ .Permalink }}" title="{{ .Title }}">
+		<img src="{{ .Site.BaseURL }}thumbnails/{{ .Params.thumbnail }}" alt="{{ .Title }}">
+		<div class="div_overlay">
+			<ul class="tag_list">
+				{{ range .Params.categories }}
+				<li>{{ . }}</li>
+				{{ end }}
+			</ul>	
+		</div>
+	</a>
+</li>

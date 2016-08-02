@@ -1,0 +1,12 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+{{ partial "header.html" . }}
+{{ partial "headbar_inside.html" . }}
+{{ partial "body_pages.html" . }}
+
+<div id="general_container">
+	<h1>{{ .Title }}</h1>
+	<h2>Ha funcionat! Aquest html està fet a partir de la plantilla correcta :)</h2>
+</div>
+
+{{ partial "footer.html" . }}

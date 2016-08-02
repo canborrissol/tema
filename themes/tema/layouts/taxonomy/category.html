@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+{{ partial "headbar.html" . }}
+{{ partial "body_pages.html" . }}
+
+<div id="general_container" class="clearfix">
+	<div id="cat_bar">
+		<p>Showing {{ .Title }} category</p>
+	</div>
+	<ul>
+	{{ range .Data.Pages }}
+			{{ .Render "thumbox" }}   <!-- Renderitzo amb la plantilla .thumbox -->
+	{{ end }}
+	</ul>
+
+</div>
+
+{{ partial "footer.html" . }}

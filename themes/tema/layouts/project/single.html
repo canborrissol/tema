@@ -1,0 +1,57 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+{{ partial "header.html" . }}
+{{ partial "headbar_inside.html" . }}
+{{ partial "body_projects.html" . }}
+
+<div id="general_container" class="projectes clearfix">
+	<h1>{{ .Title }}</h1>
+
+	<section class="proj_imgs">
+	{{ range .Params.images }}
+		<img src="{{ $baseUrl }}img/{{ . }}">
+	{{ end }}
+	</section>
+
+	<div id="proj_data_container" class="clearfix">
+
+		<section class="proj_share">
+			<ul>
+				<li id="proj_share_tw">
+					<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+					<script>
+						!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+					</script>
+				</li>
+			</ul>
+		</section>
+
+		<section class="proj_desc">{{ .Content }}</section>
+
+		<section class="proj_categories">
+			<ul class="proj_category_list">
+				{{ range .Params.categories }}
+					<li><a href="categories/{{ . | urlize }}">{{ . }}</a></li>
+				{{ end }}
+			</ul>
+		</section>
+
+	</div>	<!-- "proj_data" end --> 
+
+	<nav>
+		{{if .PrevInSection}}
+			<a id="nav_prev" href="{{.PrevInSection.Permalink}}">
+				<img src="{{ $baseUrl }}svg/prev_arrow.svg" alt="previous">
+			</a>
+		{{end}}
+
+		{{if .NextInSection}}
+			<a id="nav_next" href="{{.NextInSection.Permalink}}">
+				<img src="{{ $baseUrl }}svg/next_arrow.svg" alt="next">
+			</a>
+		{{end}}
+	</nav>
+
+</div>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+{{ partial "headbar.html" . }}
+{{ partial "body_pages.html" . }}
+
+<div id="general_container" class="clearfix">
+
+	<ul>
+	{{ range first 10 .Data.Pages }}
+		{{ if eq .Type "project" }}
+			
+			{{ .Render "thumbox" }}   <!-- Renderitzo amb la plantilla .thumbox -->
+
+		{{ end }}
+	{{ end }}
+	</ul>
+
+</div>
+
+{{ partial "footer.html" . }}
