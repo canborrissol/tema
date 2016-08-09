@@ -51,7 +51,8 @@ body.body_projects {
 #general_container, #headbar_container, #footer_container {
   width: 95%;
   max-width: 1680px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: 16px; }
 
 #headbar {
   width: 100%;
@@ -336,5 +337,13 @@ nav .nav_back_arrow {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 0.75em; }
+
+/*** About *******************************************/
+.about .about_text p {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1.5;
+  margin-top: 1em; }
 
 /*# sourceMappingURL=styles.css.map */
