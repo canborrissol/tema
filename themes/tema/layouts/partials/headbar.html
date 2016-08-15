@@ -5,9 +5,15 @@
 		<a href="{{ $baseUrl }}"><p id="title">Daniel Sevilla <span>graphic designer</span></p></a>
 		<nav>
 			{{ range .Site.Pages }}
+
 				{{ if eq .Type "page" }}
 					<a href="{{ .Permalink }}">{{ .Title }}</a>
 				{{ end }}
+
+				{{ if eq .Type "about" }}
+					<a href="{{ .Permalink }}">{{ .Title }}</a>
+				{{ end }}
+				
 			{{ end }}
 		</nav>
 	</div>

@@ -42,6 +42,11 @@ body.body_pages {
 	background: white;
 }
 
+body.body_about {
+	background: $base_color;
+}
+
+
 body.body_projects {
 	background: $body_dark_color;
 }
@@ -344,7 +349,7 @@ body.body_projects {
 
 	width: 100%;
 
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto', serif;
 	font-weight: 400;
 	line-height: 1.5;
 }
@@ -464,11 +469,16 @@ nav .nav_back_arrow {
 
 /*** About *******************************************/
 
+
+#general_container.about {
+	color: white;
+}
+
 .about .about_text p {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto', serif;
 	font-weight: 400;
 
-	font-size: 2em;
+	font-size: 2.5em;
 	line-height: 1.5;
 
 	margin-top: 1em;

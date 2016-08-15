@@ -1,0 +1,13 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+{{ partial "header.html" . }}
+{{ partial "headbar_inside.html" . }}
+{{ partial "body_about.html" . }}
+
+<div id="general_container" class="about">
+	<section class="about_text">
+		{{ .Content }}
+	</section>
+</div>
+
+{{ partial "footer.html" . }}
